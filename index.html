@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taschenrechner</title>
+    <style>
+      * {
+        margin: 2px;
+        padding: 2px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      table {
+        width: 100%;
+        height: 70vh;
+        background-color: gray;
+        color: white;
+      }
+
+      td {
+        width: 25%;
+        text-align: center;
+        font-size: 24px;
+      }
+      td:hover {
+        background-color: rgb(174, 53, 53);
+        cursor: pointer;
+      }
+
+      #resultArea {
+        height: 30vh;
+        background-color: beige;
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="resultArea">4321</div>
+    <h1>Mein Taschenrechner</h1>
+    <table>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>DEL</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>/</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>x</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>,</td>
+        <td id="result">=</td>
+        <td>+</td>
+      </tr>
+    </table>
+  </body>
+</html>
