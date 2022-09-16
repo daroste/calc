@@ -5,64 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taschenrechner</title>
-    <style>
-      * {
-        margin: 2px;
-        padding: 2px;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-
-      table {
-        width: 100%;
-        height: 70vh;
-        background-color: gray;
-        color: white;
-      }
-
-      td {
-        width: 25%;
-        text-align: center;
-        font-size: 24px;
-      }
-      td:hover {
-        background-color: rgb(174, 53, 53);
-        cursor: pointer;
-      }
-
-      #resultArea {
-        height: 30vh;
-        background-color: beige;
-        font-size: 45px;
-      }
-    </style>
+    <script src="./components/calc.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="resultArea">4321</div>
-    <h1>Mein Taschenrechner</h1>
+    <h1></h1>
+    <div id="Sum"></div>
+    <h1>Juliens Rechner</h1>
     <table>
       <tr>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>DEL</td>
+        <td onclick="appendOperation(7)">7</td>
+        <td onclick="appendOperation(8)">8</td>
+        <td onclick="appendOperation(9)">9</td>
+        <td onclick="appendOperation('*')">*</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>/</td>
+        <td onclick="appendOperation(4)">4</td>
+        <td onclick="appendOperation(5)">5</td>
+        <td onclick="appendOperation(6)">6</td>
+        <td onclick="appendOperation('-')">-</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>x</td>
+        <td onclick="appendOperation(1)">1</td>
+        <td onclick="appendOperation(2)">2</td>
+        <td onclick="appendOperation(3)">3</td>
+        <td onclick="appendOperation('+')">+</td>
       </tr>
       <tr>
-        <td>0</td>
-        <td>,</td>
-        <td id="result">=</td>
-        <td>+</td>
+        <td onclick="appendOperation(0)">0</td>
+        <td onclick="appendOperation('.')">,</td>
+        <td onclick="calculateResult()" id="result">=</td>
+        <td onclick="appendOperation('/')">/</td>
+      </tr>
+      <tr>
+        <td onclick="deleteLast()">Clear</td>
+        <td onclick="deleteAll()">Clear All</td>
+        <td></td>
       </tr>
     </table>
   </body>
